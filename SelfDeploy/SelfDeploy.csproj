@@ -3,6 +3,12 @@
   <PropertyGroup>
     <TargetFramework>net48-windows</TargetFramework>
     <UseWindowsForms>true</UseWindowsForms>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Authors>Kevin Moens</Authors>
+    <PackageProjectUrl>https://github.com/kevmoens/SelfDeploy</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/kevmoens/SelfDeploy</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <Description>SelfDeploy is a way to create self extracting zip files using only standard .NET.</Description>
   </PropertyGroup>
 
   <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
