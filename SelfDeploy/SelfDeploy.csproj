@@ -1,8 +1,24 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-	<TargetFramework>net48-windows</TargetFramework>
-	<UseWindowsForms>true</UseWindowsForms>
+    <TargetFramework>net48-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
   </PropertyGroup>
+
+  <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
+    <Exec Command="PowerShell -ExecutionPolicy Bypass -File prebuild.ps1" />
+  </Target>
+
+  <ItemGroup>
+    <None Remove="UI.zip" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="UI.zip" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="System.IO.Compression" />
+  </ItemGroup>
 
 </Project>

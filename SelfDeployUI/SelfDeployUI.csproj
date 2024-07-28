@@ -6,8 +6,9 @@
     <UseWindowsForms>true</UseWindowsForms>
     <ApplicationManifest>app.manifest</ApplicationManifest>
     <ApplicationIcon>lakegear.ico</ApplicationIcon>
+	<GenerateResourceUsePreserializedResources>true</GenerateResourceUsePreserializedResources>
   </PropertyGroup>
-
+	
   <ItemGroup>
     <None Remove="Archive.zip" />
   </ItemGroup>
@@ -18,6 +19,10 @@
 
   <ItemGroup>
     <EmbeddedResource Include="Archive.zip" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Resources.Extensions" Version="8.0.0" />
   </ItemGroup>
 
   <ItemGroup>
